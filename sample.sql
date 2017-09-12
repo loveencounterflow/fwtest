@@ -5,10 +5,12 @@
 -- Dumped from database version 9.6.4
 -- Dumped by pg_dump version 9.6.4
 
+DROP TABLE IF EXISTS formulas CASCADE;
+
 CREATE TABLE formulas (
     glyph text NOT NULL,
     idx integer NOT NULL,
-    is_final boolean NOT NULL,
+    is_final text NOT NULL,
     formula text NOT NULL,
     operators_txt text NOT NULL,
     components_txt text NOT NULL,
@@ -31,17 +33,17 @@ COPY formulas (glyph, idx, is_final, formula, operators_txt, components_txt, par
 丄	1	f	⿱丨一	⿱	丨一	{⿱,丨,一}	{⿱}	{丨,一}	3	1	2	{}
 丅	1	f	⿱一丨	⿱	一丨	{⿱,一,丨}	{⿱}	{一,丨}	3	1	2	{}
 丆	1	f	⿱一丿	⿱	一丿	{⿱,一,丿}	{⿱}	{一,丿}	3	1	2	{}
-万	1	f	⿱一勹	⿱	一勹	{⿱,一,勹}	{⿱}	{一,勹}	3	1	2	{}
+万	1	f亠土卅	⿱一勹	⿱	一勹	{⿱,一,勹}	{⿱}	{一,勹}	3	1	2	{}
 丈	1	f	⿻𠂇㇏	⿻	𠂇㇏	{⿻,𠂇,㇏}	{⿻}	{𠂇,㇏}	3	1	2	{}
 三	1	f	⿱一二	⿱	一二	{⿱,一,二}	{⿱}	{一,二}	3	1	2	{}
 上	1	f	⿱⺊一	⿱	⺊一	{⿱,⺊,一}	{⿱}	{⺊,一}	3	1	2	{}
-下	1	f	⿱一卜	⿱	一卜	{⿱,一,卜}	{⿱}	{一,卜}	3	1	2	{}
-丌	1	f	⿱一	⿱	一	{⿱,一,}	{⿱}	{一,}	3	1	2	{}
+下	1	f	⿱一卜grüße	⿱	一卜	{⿱,一,卜}	{⿱}	{一,卜}	3	1	2	{}
+丌	1	f	⿱一something	⿱	一	{⿱,一,}	{⿱}	{一,}	3	1	2	{}
 不	1	f	⿸丆卜	⿸	丆卜	{⿸,丆,卜}	{⿸}	{丆,卜}	3	1	2	{}
 与	1	f	⿹一	⿹	一	{⿹,,一}	{⿹}	{,一}	3	1	2	{}
 与	2	f	⿹⿺㇉一一	⿹⿺	㇉一一	{⿹,⿺,㇉,一,一}	{⿹,⿺}	{㇉,一,一}	5	2	3	{一}
 与	3	f	(⿱⺊𠃌一)	(⿱)	⺊𠃌一	{(,⿱,⺊,𠃌,一,)}	{(,⿱,)}	{⺊,𠃌,一}	6	3	3	{}
-丏	1	f	⿹⿸丅𠃌𠃊	⿹⿸	丅𠃌𠃊	{⿹,⿸,丅,𠃌,𠃊}	{⿹,⿸}	{丅,𠃌,𠃊}	5	2	3	{}
+丏	1	f	⿹⿸丅RANDOM𠃌𠃊	⿹⿸	丅𠃌𠃊	{⿹,⿸,丅,𠃌,𠃊}	{⿹,⿸}	{丅,𠃌,𠃊}	5	2	3	{}
 丐	1	f	⿱下㇉	⿱	下㇉	{⿱,下,㇉}	{⿱}	{下,㇉}	3	1	2	{}
 丑	1	f	⿹𠃌土	⿹	𠃌土	{⿹,𠃌,土}	{⿹}	{𠃌,土}	3	1	2	{}
 丒	1	f	⿱刃一	⿱	刃一	{⿱,刃,一}	{⿱}	{刃,一}	3	1	2	{}
