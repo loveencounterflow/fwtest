@@ -19,3 +19,12 @@ sudo -u postgres PAGER=./pspg         psql -d fwtest -c 'select * from formulas'
 ```
 
 
+![fwtest-most-1.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-most-1.png?raw=true)
+
+![fwtest-most-2.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-most-2.png?raw=true)
+
+![fwtest-pspg-1.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-pspg-1.png?raw=true)
+
+![fwtest-pspg-2.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-pspg-2.png?raw=true)
+
+
