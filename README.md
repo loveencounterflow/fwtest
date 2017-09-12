@@ -39,7 +39,8 @@ character cell.
 ![fwtest-pspg-1.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-pspg-1.png?raw=true)
 
 Almost perfect picture with `pspg`, although it is hard to explain why a misalignment of one character
-cell appears near the top right but not right next to a CJK character, only a bit to the right of it.
+cell appears near the top right but not right next to a CJK character, only a bit to the right of it. Sorry
+for my borked language.
 
 ### pspg 2
 
@@ -56,6 +57,17 @@ But now comes the fun part (and the silver lining): Taking advantage of `pspg`'s
 yellow) is actually OK with mixed single-character and double-character cell content. It is only when
 parts have to be left out that the display gets scrambled (to obtain this screenshot I had to insert some
 nonsense content into the SQL, therefore this screenshot doesn't quite match the ones above).
+
+
+## Ideas
+
+The problem seems to be in how many characters have to be cut off when doing horizontal scrolling.
+
+Not all scroll positions will be fully displayable. With an arbitrary mixture of single- and double-width
+characters, the first position to paint could always land in the middle of a wide character. Since terminal
+emulators do not allow to paint half characters (I guess), it will probably be necessary to omit the
+full-width character in such cases and instead paint a blank or another (single-cell) replacement.
+
 
 
 
