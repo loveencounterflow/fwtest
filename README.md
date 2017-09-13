@@ -21,6 +21,19 @@ sudo -u postgres PAGER=./pspg         psql -d fwtest -c 'select * from formulas'
 ## Screenshots
 
 
+![fwtest-pspg-4.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-pspg-4.png?raw=true)
+
+The issues visible in the screenshots below have been **fixed** by [Pavel Stěhule](https://github.com/okbob)
+in **record time** (late evening -> next early afternoon).
+
+**A big shoutout to Pavel!!**
+
+The C crowd will want to feast their eyes on [pspg/f7669962](https://github.com/okbob/pspg/commit/f7669962303c0268d3743f608fb0c1237ae8b72f).
+
+## Screenshots (before [pspg/f7669962](https://github.com/okbob/pspg/commit/f7669962303c0268d3743f608fb0c1237ae8b72f))
+
+The below is resolved in https://github.com/okbob/pspg/issues/19
+
 ### most 1
 
 ![fwtest-most-1.png](https://github.com/loveencounterflow/fwtest/blob/master/fwtest-most-1.png?raw=true)
